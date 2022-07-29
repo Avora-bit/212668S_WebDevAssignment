@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>rhythm game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/script.js" defer></script>
+    <link rel="stylesheet" href="CSS/StyleSheet.css">
+
+    <!-- background -->
+</head>
+
+<body>
+    <!-- display notes that float up, click to have fun fact -->
+    <!-- nav bar here -->
+    <script>  //script is a embed executable javascript code
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") x.className += " responsive";
+            else x.className = "topnav";
+        }
+    </script>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">
+            <image src="Assets/Image/Logo.png" height=20px></image>Home
+        </a>
+        <a href="history.html">Introduction and History</a>
+        <a href="rhythm.html" class="active">Rhythm game</a>
+        <div class="dropdown">
+            <button class="dropbtn">Instruments </button>
+            <div class="dropdown-content">
+                <a href="instruments.html">first instrument</a>
+                <a href="#">more instruments</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9834;</a>
+    </div>
+
+
+</body>
+
+
+</html>
