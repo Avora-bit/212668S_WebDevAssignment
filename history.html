@@ -18,54 +18,70 @@
     <!-- picture of old people and composers in their era -->
     <!-- invention of certain instruments: theremin -->
     <!-- nav bar here -->
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") x.className += " responsive";
-            else x.className = "topnav";
-        }
-    </script>
-
     <div class="topnav" id="myTopnav">
-        <a href="index.html">
+        <a href="index.html" class="active">
             <image src="Assets/Image/Logo.png" height=20px></image>Home
         </a>
-        <a href="history.html" class="active">Introduction and History</a>
-        <a href="rhythm.html">Rhythm game</a>
-        <div class="dropdown">
-            <button class="dropbtn">Instruments </button>
-            <div class="dropdown-content">
-                <a href="instruments.html">first instrument</a>
-                <a href="#">more instruments</a>
-            </div>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9834;</a>
+        <a href="history.html">Introduction and History</a>
+        <a href="synth.html">Play the Synth</a>
+        <a href="People.html">Famous People</a>
+        <a href="javascript:void(0);" class="icon" onclick="ShowTopNav()">&#9834;</a>
     </div>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
     <div class="timeline">
         <div class="container left">
             <div class="content">
-                <h2>2016</h2>
-                <p>Lorem ipsum..</p>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
                 <h2>2017</h2>
                 <p>Lorem ipsum..</p>
             </div>
         </div>
+
+        <div class="container right">
+            <div class="content">
+                <button class="collapsible">1800s-Baton</button>
+                <div class="collapsecontent">
+                    <p>The <a href="https://en.wikipedia.org/wiki/Baton_(conducting)" target="_blank">baton</a> is a
+                        stick used by conductors, primarily to enlarge and enchance the manual and bodily movement
+                        associated with directing an ensemble of musicians. Before popularity, conductors used violin
+                        bows or rolled paper, branches even, in place of the baton.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="container left">
             <div class="content">
                 <h2>2017</h2>
                 <p>Lorem ipsum..</p>
             </div>
         </div>
+
+        <div class="container left">
+            <div class="content">
+                <button class="collapsible">1928 - Theremin</button>
+                <div class="collapsecontent">
+                    <p>The <a href="https://en.wikipedia.org/wiki/Theremin" target="_blank">theremin</a> (/'θɛrəmin/;
+                        originally known
+                        as the ætherphone/etherphone, thereminophone[2] or termenvox/thereminvox) is an electronic
+                        musical instrument controlled without physical contact by the performer (who is known as a
+                        thereminist). It is named after its inventor, <a
+                            href="https://en.wikipedia.org/wiki/Leon_Theremin" target="_blank">Leon Theremin</a>, who
+                        patented the
+                        device in 1928.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
         <div class="container right">
             <div class="content">
                 <h2>2017</h2>
-                <p>Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..
-                    Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..
+                <p>Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem
+                    ipsum..Lorem ipsum..
+                    Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem
+                    ipsum..Lorem ipsum..
                 </p>
             </div>
         </div>
@@ -78,8 +94,10 @@
         <div class="container right">
             <div class="content">
                 <h2>2017</h2>
-                <p>Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..
-                    Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..</p>
+                <p>Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem
+                    ipsum..Lorem ipsum..
+                    Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem ipsum..Lorem
+                    ipsum..Lorem ipsum..</p>
             </div>
         </div>
         <div class="container left">
