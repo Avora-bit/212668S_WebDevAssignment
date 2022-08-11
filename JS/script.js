@@ -1,4 +1,4 @@
-{       //nav bar
+{         //nav bar
   function ShowTopNav() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") x.className += " responsive";
@@ -6,7 +6,7 @@
   }
 }
 
-{       //collapsible timeline
+{         //collapsible timeline
   var coll = document.getElementsByClassName("collapsible");
   var i;
 
@@ -43,7 +43,6 @@
 }
 
 {         //score slideshow
-
   let slideIndex = 1;
   showSlides(slideIndex);
 
@@ -74,7 +73,7 @@
 
 }
 
-{       // play the piano
+{         // play the piano
   const audioContext = new AudioContext();
   const oscList = [];
   let mainGainNode = null;
@@ -289,13 +288,5 @@
 
   function changeVolume(event) {
     mainGainNode.gain.value = volumeControl.value;
-  }
-}
-
-{       //card grid for famous people
-  const card = document.getElementById("card");
-  card.addEventListener("click", flipCard);
-  function flipCard() {
-    card.classList.toggle("flipCard");
   }
 }

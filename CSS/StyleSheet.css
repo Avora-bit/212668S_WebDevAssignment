@@ -33,22 +33,23 @@ footer {
     flex-direction: column;
 }
 
+.textbox {
+    background-color: #aaa;
+    margin: 0% 5% 0% 5%;
+    min-height: 95vh;
+    display: block;
+}
+
 @media screen and (max-width: 540px) {
-
     /* mobile phone */
-
 }
 
 @media screen and (max-width: 720px) {
-
     /* tablet */
-
 }
 
 @media screen and (max-width: 1440px) {
-
     /* laptop/computer */
-
 }
 
 
@@ -176,18 +177,22 @@ footer {
 }
 
 /* tree diagram for instrument types */
+.tree-diagram {
+    width: 80%;
+    margin: auto;
+}
+
 .tree-diagram ul {
     display: flex;
     position: relative;
 
     /* Reset */
     list-style-type: none;
-    margin: 0;
     padding: 1rem 0.5rem 0rem 0.5rem;
 }
 
 .tree-diagram ul ul::before {
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 3px solid rgba(0, 0, 0, 0.8);
     content: '';
 
     /* Position */
@@ -211,8 +216,8 @@ footer {
 }
 
 .tree-diagram li::before {
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 3px solid rgba(0, 0, 0, 0.8);
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
     content: '';
 
     /* Position */
@@ -226,7 +231,7 @@ footer {
 }
 
 .tree-diagram li::after {
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
     content: '';
 
     /* Position */
@@ -386,7 +391,9 @@ li.tree-diagram__root::before {
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
+    transition: max-width 0.3s ease-out;
     border: none;
     text-align: left;
     outline: none;
@@ -395,6 +402,10 @@ li.tree-diagram__root::before {
 
 .collapsible:hover {
     background-color: #555;
+}
+
+.collapsible.active {
+    min-width: 300px;
 }
 
 .collapsible:after {
@@ -411,9 +422,11 @@ li.tree-diagram__root::before {
 
 .collapsecontent {
     padding: 0 18px;
+    width: 100%;
+    max-width: 300px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
     background-color: #f1f1f1;
 }
 
@@ -612,7 +625,7 @@ li.tree-diagram__root::before {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media screen and (max-width: 540px) {
 
     .prev,
     .next,
@@ -621,6 +634,73 @@ li.tree-diagram__root::before {
     }
 }
 
-.flipCard {
+
+/* flip card for famous people, based on harry potter's magic cards */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 540px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
 }
